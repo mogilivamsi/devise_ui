@@ -1,20 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogApi</title>
+  <title>RailsBootstrap4Integration</title>
   <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-  <body>
-    <%= render "layouts/sidebar" %>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-offset-2 col-xs-10">
-          <%= yield %>
-        </div>
+
+
+<body class="d-flex flex-column min-vh-100">
+<header class="p-3 bg-dark text-white">
+
+
+
+
+
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+
+      </ul>
+
+<!--      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">-->
+<!--        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">-->
+<!--      </form>-->
+
+
+      <div class="text-end">
+        <% if !session[:jwt].present? %>
+
+<!--        <button type="button" class="btn btn-outline-light me-2">Login</button>-->
+<!--        <button type="button" class="btn btn-warning">Sign-up</button>-->
+          <%= link_to "Login", users_login_new_url ,:class=>"btn btn-outline-light me-2" %>
+          <%= link_to "Sign-up", users_signup_new_url ,:class=>"btn btn-warning" %>
+          <%else %>
+          <%= link_to "Sign out", users_logout_url ,:class=>"btn btn-outline-light me-2" %>
+          <% end %>
       </div>
     </div>
-  </body>
+  </div>
+</header>
+
+<div class="container-fluid h-custom">
+  <% if !session[:jwt].present? %>
+  <div class="row d-flex justify-content-center align-items-center ">
+    <div class="col-md-9 col-lg-6 col-xl-5">
+      <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid"
+           alt="Sample image">
+    </div>
+    <div class="container">
+      <% flash.each do |type, msg| %>
+        <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show">
+          <%= msg %>
+          <button class="close" data-dismiss="alert">x</button>
+        </div>
+      <% end %>
+      <%#= session[:jwt].inspect %>
+      <%= yield %>
+    </div>
+
+
+  </div>
+    <% else %>
+    <%= yield %>
+    <% end %>
+</div>
+
+
+
+<footer class="mt-auto">
+  <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Copyright © 2020. All rights reserved.
+    </div>
+    <!-- Copyright -->
+
+    <!-- Right -->
+    <div>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="#!" class="text-white">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </div>
+</footer>
+</body>
+
 </html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <title>BlogApi</title>-->
+  <%#= csrf_meta_tags %>
+
+  <%#= stylesheet_link_tag    'application', media: 'all' %>
+  <%#= javascript_include_tag 'application' %>
+<!--</head>-->
+<!--  <body>-->
+    <%#= render "layouts/sidebar" %>
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-xs-offset-2 col-xs-10">-->
+          <%#= yield %>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </body>-->
+<!--</html>-->

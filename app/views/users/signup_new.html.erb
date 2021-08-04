@@ -1,0 +1,40 @@
+<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+  <%= form_with scope: :user, url: "/users/signup" ,:method=>"post" do |f| %>
+    <div class="form-outline mb-4">
+      <%= f.label :email,:class=>"form-label" %>
+      <%= f.text_field :email,:class=>"form-control form-control-lg"  %>
+    </div>
+    <div class="form-outline mb-4">
+      <%= f.label :password,:class=>"form-label"  %>
+      <%= f.password_field :password,:class=>"form-control form-control-lg"  %>
+    </div>
+    <div class="form-outline mb-4">
+      <%= f.label :password_confirmation,:class=>"form-label"  %>
+      <%= f.password_field :password_confirmation,:class=>"form-control form-control-lg"  %>
+    </div>
+    <div class="form-outline mb-4">
+      <%= f.label :first_name,:class=>"form-label" %>
+      <%= f.text_field :first_name,:class=>"form-control form-control-lg"  %>
+    </div>
+    <div class="form-outline mb-4">
+      <%= f.label :last_name,:class=>"form-label" %>
+      <%= f.text_field :last_name,:class=>"form-control form-control-lg"  %>
+    </div>
+    <div class="form-outline mb-4">
+      <%= f.label :phone_number,:class=>"form-label" %>
+      <%= f.text_field :phone_number,:class=>"form-control form-control-lg"  %>
+    </div>
+
+
+    <div class="text-center text-lg-start mt-4 pt-2">
+
+      <%=  f.submit :Register, class: 'btn btn-primary btn-lg',:style=>"padding-left: 2.5rem; padding-right: 2.5rem;" %>
+      <p class="small fw-bold mt-2 pt-1 mb-0">Do you have an account? <a href="/users/login_new"
+                                                                        class="link-danger">Login</a></p>
+    </div>
+
+  <% end %>
+
+
+</div>

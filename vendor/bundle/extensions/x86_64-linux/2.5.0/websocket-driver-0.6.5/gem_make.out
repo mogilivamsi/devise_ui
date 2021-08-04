@@ -1,0 +1,15 @@
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+/home/shivareddy/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20210724-72335-14g6558.rb extconf.rb
+creating Makefile
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210724-72335-zwxx3k

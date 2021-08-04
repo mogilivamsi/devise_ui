@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= form_with  url: "/users/search" ,:class=>"form-inline my-2 my-lg-10",:method=>"get" do |f| %>
+
+      <%= f.text_field :query,:class=>"form-control mr-sm-2",:placehoder=>"search"  %>
+      <%=  f.submit :search, class: 'btn btn-outline-success my-2 my-sm-0' %>
+
+    <%end %>
+    <!--    <form class="form-inline my-2 my-lg-10">-->
+
+    <!--      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+    <%#=  f.submit :Register, class: 'btn btn-primary btn-lg',:style=>"padding-left: 2.5rem; padding-right: 2.5rem;" %>
+    <!--      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+    <!--    </form>-->
+  </div>
+</nav>
+<h2>List of users (<%= @users.count  %>)</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Phone number</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |each_r| %>
+    <tr>
+      <td> <%= each_r.first_name %></td>
+      <td> <%= each_r.last_name %></td>
+      <td> <%= each_r.email %></td>
+      <td> <%= each_r.phone_number %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

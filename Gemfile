@@ -2,16 +2,16 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.2'
+gem 'rails', '6.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '~> 6.0'
+# gem 'bootstrap-sass', '~> 3.3.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 5.0.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -32,7 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'faraday'
-
+gem 'sprockets', '~>3.0'
 group :development, :test do
   gem 'pry'
   gem 'byebug'
@@ -44,4 +44,8 @@ group :development, :test do
   gem 'spring'
   gem 'dotenv-rails'
 end
+gem 'webpacker', '~> 4.0'
+gem 'bootsnap', '>= 1.4.2', require: false
 
+# gem "bootstrap_form", "~> 4.0"
+# gem 'sass-rails', '>= 6'

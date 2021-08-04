@@ -1,0 +1,16 @@
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/home/shivareddy/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20210724-72335-8c50tk.rb extconf.rb
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

@@ -1,0 +1,19 @@
+<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+  <%= form_with scope: :user, url: "/users/verify_otp" ,:method=>"post" do |f| %>
+
+    <div class="form-outline mb-4">
+      <%= f.label :otp,:class=>"form-label"  %>
+      <%= f.text_field :otp,:class=>"form-control form-control-lg"  %>
+    </div>
+
+    <div class="text-center text-lg-start mt-4 pt-2">
+
+      <%=  f.submit :Login, class: 'btn btn-primary btn-lg',:style=>"padding-left: 2.5rem; padding-right: 2.5rem;" %>
+
+    </div>
+
+  <% end %>
+
+
+</div>

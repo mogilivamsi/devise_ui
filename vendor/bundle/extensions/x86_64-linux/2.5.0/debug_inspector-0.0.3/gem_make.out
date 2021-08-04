@@ -1,0 +1,15 @@
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/home/shivareddy/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20210724-72335-1y4iki0.rb extconf.rb
+creating Makefile
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/shivareddy/Desktop/shiva/tutor/blog-spoonacular-api/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20210724-72335-hsv6g8
